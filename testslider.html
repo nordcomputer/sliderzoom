@@ -1,23 +1,51 @@
 <html>
 <head>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-  <script>
-    $(document).ready(function(){
-      $('.slider').bxSlider();
-    });
-  </script>
 
 </head>
 <body>
 
   <div class="slider">
-    <div>I am a slide.</div>
-    <div>I am another slide.</div>
+    <div class="nummereins"><img src="human.png"/></div>
+
   </div>
 
 </body>
+<style>
+.slider {
+	margin:auto;
+	height:auto;
+	width:auto;
+	text-align:center;
+}
+.nummereins {
+	background-image: url('human_full.jpg');
+	background-size: 105%;
+	transition: 10s;
+	background-position: center;
+	background-repeat: no-repeat;
+	float: none;
+	margin: auto;
+	width: 30vw;
+}
+.nummereins img{
+	transition: 10s;
+	width: 100%;
+	transform-origin: bottom;
+	transform: scale(1.05);
+	margin:auto;
+	float:none;
+}
+
+
+
+.nummereins:hover {
+	background-size:100%;
+}
+.nummereins:hover img {
+	transform:scale(1.15);
+
+}
+</style>
+
 </html>
