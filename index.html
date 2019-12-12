@@ -8,8 +8,8 @@
 	<body>
 
 		<div class="slider">
-			<a href="#" class="nummereins"><img src="human.png"/></a>
-			<a href="#" class="nummereins"><img src="human.png"/></a>
+			<a href="#" class="canvas bild1"><img src="human.png"/></a>
+			<a href="#" class="canvas bild2"><img src="human.png"/></a>
 		</div>
 		<script>
 			$(document).ready(function(){
@@ -17,11 +17,11 @@
 					adaptiveHeight:true,
 					slideWidth: 600,
 					onSliderLoad: function (currentIndex) {
-						$('.nummereins').removeClass('active');
-						$('.nummereins:nth-of-type(2)').addClass('active');
+						$('.canvas').removeClass('active');
+						$('.canvas:nth-of-type(2)').addClass('active');
 					},
 					onSlideAfter: function($slideElement, oldIndex, newIndex){
-						$('.nummereins').removeClass('active');
+						$('.canvas').removeClass('active');
 						$slideElement.addClass('active');
 					}
 				});
@@ -37,8 +37,13 @@
 		float: none;
 		margin: auto;
 	}
-	.nummereins {
+	.bild1 {
 		background-image: url('human_full.jpg');
+	}
+	.bild2 {
+		background-image: url('human_full.jpg');
+	}
+	.canvas {
 		background-size: 105%;
 		transition: 0s;
 		background-position-y: bottom;
@@ -50,7 +55,7 @@
 		transform-origin: bottom;
 		transition-timing-function: linear;
 	}
-	.nummereins img{
+	.canvas img{
 		transition: 0s;
 		width: 600px;
 		transform-origin: bottom;
@@ -59,11 +64,11 @@
 		float:none;
 		transition-timing-function: linear;
 	}
-	.nummereins.active {
+	.canvas.active {
 		background-size:100%;
 		transition: 5s;
 	}
-	.nummereins.active img {
+	.canvas.active img {
 		transform:scale(1.10);
 		transition: 5s;
 
